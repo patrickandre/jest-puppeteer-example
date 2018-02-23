@@ -16,14 +16,12 @@ describe('Authentication Suite', () => {
 
 
 	it('should be able to login with a burner account', async () => {
-				await page.goto('https://gizmodo.com/');
-
 		// const elementHandle = await page.$('#.section-nav__section.js_nav-section > a');
 			await Promise.all([
 			// Wait for redirect
-			page.waitForSelector('.section-nav__section.js_nav-section > a'),
+			// page.waitForSelector('body > div.navwrap--outer.js-navwrap--outer.navwrap--frontpage > nav.js_global-nav-wrap.js_top-nav.global-nav.global-nav--desktop.shown.hide-for-medium-down > div.section-nav > ul > li:nth-child(1) > a'),
 			// Click on the first popular post
-			page.click('.section-nav__section.js_nav-section > a')
+			page.click('body > div.navwrap--outer.js-navwrap--outer.navwrap--frontpage > nav.js_global-nav-wrap.js_top-nav.global-nav.global-nav--desktop.shown.hide-for-medium-down > div.section-nav > ul > li:nth-child(1) > a')
 
 		]);
 // 			await page.evaluate(() => {
