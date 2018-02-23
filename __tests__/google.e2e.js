@@ -9,23 +9,22 @@ describe('Authentication Suite', () => {
 	}, timeout);
 
 	afterAll(async () => {
-		await page.close();
+		 await page.close();
 	});
 
 
 
 	it('should be able to login with a burner account', async () => {
-/*		const elementHandle = await page.$('#screenNameSignIn');
-		const elementHandleKey = await page.$('#token');
-		await elementHandle.type(username, {delay: 10});
-		await elementHandleKey.type(password, {delay: 10});
-		await page.click('#login-selector-form > div.row.newlogin > div:nth-child(2) > div.row.collapse.text-right > button');
+		const elementHandle = await page.$('#lst-ib');
+		await elementHandle.type('Puggles', {delay: 10});
+		await page.click('input.lsb');
 		await page.waitForNavigation();
-		await page.waitForSelector('.networknav__userButton .userbutton a');
-		await page.click('.networknav__userButton .userbutton a');
-		// let UserNameLabel = await page.evaluate(() => document.querySelector('[data-username="gawkerselenium"]').innerText.trim());
+		await page.waitForSelector('div#rcnt');
+		// await page.click('.networknav__userButton .userbutton a');
+		let UserNameLabel = await page.evaluate(() => document.querySelector('div#rcnt').innerText.trim());
+		console.log('UserNameLabel---', UserNameLabel)
 		// expect(UserNameLabel).toBe('gawkerselenium');
-		expect(page.url()).toBe('http://kinja.localhost:9000/dashboard');*/
+		// expect(page.url()).toBe('http://kinja.localhost:9000/dashboard');
 		expect(true).toBe(true);
 	}, timeout);
 
